@@ -100,6 +100,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 3b. Institutional Formats Modal Handler (Consentimiento y Remisión)
+  const openFormatsBtn = document.getElementById('openFormatsModalBtn');
+  const formatsModal = document.getElementById('formatsModal');
+  const closeFormatsModal = document.getElementById('closeFormatsModal');
+  const downloadAllFormatsBtn = document.getElementById('downloadAllFormatsBtn');
+
+  if (openFormatsBtn && formatsModal) {
+    openFormatsBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      formatsModal.classList.add('active');
+    });
+  }
+
+  if (closeFormatsModal && formatsModal) {
+    closeFormatsModal.addEventListener('click', () => formatsModal.classList.remove('active'));
+    formatsModal.addEventListener('click', (e) => {
+      if (e.target === formatsModal) formatsModal.classList.remove('active');
+    });
+  }
+
+  if (downloadAllFormatsBtn) {
+    downloadAllFormatsBtn.addEventListener('click', () => {
+      const docs = [
+        { href: './docs/MI-EXT-CPS-FOR-01-A-Consentimiento-Informado-Mayores.pdf', name: 'MI-EXT-CPS-FOR-01-A_Consentimiento_Mayores_FUNDES.pdf' },
+        { href: './docs/MI-EXT-CPS-FOR-01-B-Consentimiento-Informado-Menores.pdf', name: 'MI-EXT-CPS-FOR-01-B_Consentimiento_Menores_FUNDES.pdf' },
+        { href: './docs/MI-EXT-CPS-FOR-05-Remision-Interconsulta.pdf', name: 'MI-EXT-CPS-FOR-05_Remision_Interconsulta_FUNDES.pdf' }
+      ];
+      docs.forEach((doc, idx) => {
+        setTimeout(() => {
+          const a = document.createElement('a');
+          a.href = doc.href;
+          a.download = doc.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }, idx * 400);
+      });
+    });
+  }
+
   // 4. SOS Emergency Trigger (Direct calm stabilization modal)
   const sosBtn = document.getElementById('sosEmergencyBtn');
   const sosModal = document.getElementById('sosModal');

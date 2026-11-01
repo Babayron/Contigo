@@ -278,14 +278,15 @@ export const SEARCH_INDEX = [
     target: { section: 'herramientas', anchorId: 'openBoxBtn' }
   },
   {
-    id: 'ficha-triage',
-    title: 'Ficha de Registro y Triage FUNDES (Formato)',
+    id: 'formatos-institucionales',
+    title: 'Formatos Institucionales: Consentimiento y Remisión (FUNDES)',
     category: 'Herramientas',
     filter: 'herramientas',
     categoryClass: 'cat-herramientas',
-    description: 'Formato clínico estandarizado de valoración inicial: motivo de consulta, factores estresores y plan de remisión.',
-    keywords: ['ficha', 'registro', 'formato clinico', 'pdf', 'descarga', 'fundes', 'historia', 'triage'],
-    target: { section: 'herramientas' }
+    description: 'Formatos oficiales SIAC: Consentimiento Informado (Mayores y Menores) y Remisión para Interconsulta clínica.',
+    keywords: ['formatos', 'institucionales', 'consentimiento', 'remision', 'interconsulta', 'menores', 'mayores', 'siac', 'fundes', 'pdf', 'descarga', 'ficha'],
+    target: { section: 'herramientas', anchorId: 'openFormatsModalBtn' },
+    action: { openModal: 'formatsModal' }
   },
   {
     id: 'protocolo-bolsillo',

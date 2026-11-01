@@ -81,6 +81,18 @@
   padding: 1.75rem;
   overflow-y: auto;
   line-height: 1.6;
+  flex: 1;
+}
+
+.modal-footer {
+  padding: 0.9rem 1.75rem;
+  border-top: 1px solid var(--border-light);
+  background: var(--bg-card-alt);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 0.75rem;
 }
 
 /* SECTION TABS SYSTEM */
@@ -1258,3 +1270,131 @@
     display: none;
   }
 }
+
+/* ========================================================
+   FORMATOS INSTITUCIONALES (CONSENTIMIENTO Y REMISIÓN)
+   ======================================================== */
+.format-card-item {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  transition: all var(--transition-base);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.format-card-item:hover {
+  border-color: var(--brand-teal);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.format-card-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.format-code-badge {
+  background: #f0fdfa;
+  color: #0f766e;
+  border: 1px solid #99f6e4;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.format-ver-badge {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid var(--border-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.format-pages-badge {
+  background: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #ffedd5;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.format-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.25rem 0 0.35rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.format-card-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.format-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border-light);
+}
+
+.btn-format-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--brand-teal);
+  color: white !important;
+  padding: 0.48rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(0, 154, 166, 0.2);
+}
+
+.btn-format-download:hover {
+  background: var(--brand-teal-dark);
+  transform: translateY(-1px);
+  color: white !important;
+  box-shadow: 0 4px 8px rgba(0, 154, 166, 0.3);
+}
+
+.btn-format-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--bg-card-alt);
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-light);
+  padding: 0.48rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-format-preview:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: var(--brand-teal) !important;
+}
+
